@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'WhalesPad | The Best Launchpad',
+  title: 'Crypto Finder Club | The Best Launchpad',
   description: 'The most advanced decentralized launchpad for next-generation blockchain projects.',
 };
 
