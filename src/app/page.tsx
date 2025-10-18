@@ -3,6 +3,7 @@ import { Footer } from '@/components/layout/footer';
 import { HeroSection } from '@/components/landing/hero-section';
 import { PlatformStatusBadges } from '@/components/landing/platform-status-badges';
 import { TrendingSection } from '@/components/landing/trending-section';
+import { TeamSection } from '@/components/landing/team-section';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <TrendingSection />
         <PlatformStatusBadges />
         <HeroSection />
+        <TeamSection />
       </main>
       <Footer />
     </div>
