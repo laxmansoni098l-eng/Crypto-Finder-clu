@@ -6,6 +6,15 @@ import { Menu, Send, Twitter } from "lucide-react";
 import { Logo } from "@/components/logo";
 import Link from "next/link";
 
+const navLinks = [
+  { href: "#about", name: "About" },
+  { href: "#services", name: "Services" },
+  { href: "#team", name: "Team" },
+  { href: "#testimonials", name: "Testimonials" },
+  { href: "#pricing", name: "Pricing" },
+  { href: "#contact", name: "Contact" },
+];
+
 const socialLinks = [
   {
     href: "https://t.me/CryptoFinderClub_Ama",
@@ -64,6 +73,15 @@ export function Header() {
       <nav className="container mx-auto flex items-center justify-between p-4 md:px-6 border-b-2 border-primary">
         <Logo />
 
+        {/* Desktop Nav Links */}
+        <div className="hidden md:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <Link key={link.name} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+              {link.name}
+            </Link>
+          ))}
+        </div>
+
         {/* Desktop Social Links */}
         <div className="hidden md:flex items-center gap-2">
           {socialLinks.map((link) => (
@@ -73,6 +91,7 @@ export function Header() {
               </a>
             </Button>
           ))}
+          <Button>Get a Quote</Button>
         </div>
 
         {/* Mobile Menu */}
@@ -84,10 +103,21 @@ export function Header() {
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-background border-l-primary/20">
-              <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+            <SheetContent side="right" className="bg-background border-l-primary/20 w-full max-w-xs">
+               <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
               <div className="flex flex-col items-center justify-center h-full gap-8">
                 <Logo />
+                 <div className="flex flex-col gap-6 items-center">
+                  {navLinks.map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      className="text-lg text-foreground hover:text-primary transition-colors"
+                    >
+                      <span>{link.name}</span>
+                    </a>
+                  ))}
+                </div>
                 <div className="flex flex-col gap-4 items-center">
                   {socialLinks.map((link) => (
                      <a
@@ -102,6 +132,7 @@ export function Header() {
                     </a>
                   ))}
                 </div>
+                 <Button size="lg">Get a Quote</Button>
               </div>
             </SheetContent>
           </Sheet>
