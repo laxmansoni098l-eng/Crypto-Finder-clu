@@ -88,7 +88,7 @@ export function Footer() {
             </div>
         </div>
         <div className="mt-8 text-center text-sm text-muted-foreground border-t border-border pt-4">
-            © {new Date().getFullYear()} Crypto Finder Club. All rights reserved.
+            © 2025 Crypto Finder Club. All rights reserved.
         </div>
       </div>
     </footer>
