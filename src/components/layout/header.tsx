@@ -72,13 +72,8 @@ export function Header() {
     <header className="bg-card/80 backdrop-blur-sm sticky top-0 z-50">
       <nav className="container mx-auto flex items-center justify-between p-4 md:px-6 border-b-2 border-primary">
         <Logo />
-
-        {/* Desktop Nav Links */}
-        <div className="hidden md:flex items-center gap-6">
-          {/* Links moved to footer */}
-        </div>
         
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-2">
              <Button>Get a Quote</Button>
           </div>
