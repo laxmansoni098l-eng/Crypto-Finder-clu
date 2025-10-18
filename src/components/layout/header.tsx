@@ -75,67 +75,56 @@ export function Header() {
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-              {link.name}
-            </Link>
-          ))}
+          {/* Links moved to footer */}
         </div>
-
-        {/* Desktop Social Links */}
-        <div className="hidden md:flex items-center gap-2">
-          {socialLinks.map((link) => (
-            <Button key={link.name} variant="ghost" size="icon" asChild>
-              <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
-                {link.icon}
-              </a>
-            </Button>
-          ))}
-          <Button>Get a Quote</Button>
-        </div>
-
-        {/* Mobile Menu */}
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6 text-primary" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="bg-background border-l-primary/20 w-full max-w-xs">
-               <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
-              <div className="flex flex-col items-center justify-center h-full gap-8">
-                <Logo />
-                 <div className="flex flex-col gap-6 items-center">
-                  {navLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      className="text-lg text-foreground hover:text-primary transition-colors"
-                    >
-                      <span>{link.name}</span>
-                    </a>
-                  ))}
+        
+        <div className="flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-2">
+             <Button>Get a Quote</Button>
+          </div>
+          {/* Mobile Menu */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6 text-primary" />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-background border-l-primary/20 w-full max-w-xs">
+                 <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+                <div className="flex flex-col items-center justify-center h-full gap-8">
+                  <Logo />
+                   <div className="flex flex-col gap-6 items-center">
+                    {navLinks.map((link) => (
+                      <a
+                        key={link.name}
+                        href={link.href}
+                        className="text-lg text-foreground hover:text-primary transition-colors"
+                      >
+                        <span>{link.name}</span>
+                      </a>
+                    ))}
+                  </div>
+                  <div className="flex flex-col gap-4 items-center">
+                    {socialLinks.map((link) => (
+                       <a
+                        key={link.name}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
+                      >
+                        {link.icon}
+                        <span>{link.name}</span>
+                      </a>
+                    ))}
+                  </div>
+                   <Button size="lg">Get a Quote</Button>
                 </div>
-                <div className="flex flex-col gap-4 items-center">
-                  {socialLinks.map((link) => (
-                     <a
-                      key={link.name}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
-                    >
-                      {link.icon}
-                      <span>{link.name}</span>
-                    </a>
-                  ))}
-                </div>
-                 <Button size="lg">Get a Quote</Button>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </nav>
     </header>
