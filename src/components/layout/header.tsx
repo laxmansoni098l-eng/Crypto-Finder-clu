@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Send, Twitter } from "lucide-react";
 import { Logo } from "@/components/logo";
 import Link from "next/link";
@@ -85,6 +85,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="bg-background border-l-primary/20">
+              <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
               <div className="flex flex-col items-center justify-center h-full gap-8">
                 <Logo />
                 <div className="flex flex-col gap-4 items-center">
