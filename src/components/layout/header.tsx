@@ -15,33 +15,8 @@ const navLinks = [
   { href: "#contact", name: "Contact" },
 ];
 
-const socialLinks = [
-  {
-    href: "https://t.me/CryptoFinderClub_Ama",
-    icon: <Send className="h-5 w-5" />,
-    name: "Telegram Group",
-  },
-  {
-    href: "https://t.me/Crypto_FinderNews",
-    icon: <Send className="h-5 w-5" />,
-    name: "Telegram Channel",
-  },
-  {
-    href: "https://x.com/Cryptofinder_01",
-    icon: <Twitter className="h-5 w-5" />,
-    name: "Twitter",
-  },
-  {
-    href: "https://www.binance.com/en/live/u/29226531",
-    icon: <BinanceIcon className="h-5 w-5" />,
-    name: "Binance Live",
-  },
-  {
-    href: "https://www.binance.com/square/profile/cryptofinder_club",
-    icon: <BinanceIcon className="h-5 w-5" />,
-    name: "Binance Feed",
-  },
-];
+// This is the socialLinks array that was causing the error.
+// It has been removed in the latest version of the file.
 
 function BinanceIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -97,20 +72,6 @@ export function Header() {
                         href={link.href}
                         className="text-lg text-foreground hover:text-primary transition-colors"
                       >
-                        <span>{link.name}</span>
-                      </a>
-                    ))}
-                  </div>
-                  <div className="flex flex-col gap-4 items-center">
-                    {socialLinks.map((link) => (
-                       <a
-                        key={link.name}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-lg text-foreground hover:text-primary transition-colors"
-                      >
-                        {link.icon}
                         <span>{link.name}</span>
                       </a>
                     ))}
