@@ -32,7 +32,7 @@ export function BannerSection() {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 uppercase text-foreground">
-          Our <span className="text-primary">Partners</span>
+          PREVIOUS <span className="text-primary">WORK</span>
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
           {banners.map((banner, index) => (
