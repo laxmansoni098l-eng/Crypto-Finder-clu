@@ -4,6 +4,7 @@ import { HeroSection } from '@/components/landing/hero-section';
 import { PlatformStatusBadges } from '@/components/landing/platform-status-badges';
 import { TrendingSection } from '@/components/landing/trending-section';
 import { TeamSection } from '@/components/landing/team-section';
+import { BannerSection } from '@/components/landing/banner-section';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <PlatformStatusBadges />
         <HeroSection />
         <TeamSection />
+        <BannerSection />
       </main>
       <Footer />
     </div>
