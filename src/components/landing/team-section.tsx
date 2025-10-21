@@ -42,7 +42,7 @@ export function TeamSection() {
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 uppercase text-foreground">
           Meet Our <span className="text-primary">Team</span>
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
           {teamMembers.map((member) => {
             const image = getTeamMemberImage(member.imageId);
             return (
@@ -59,9 +59,9 @@ export function TeamSection() {
                     />
                   )}
                 </CardHeader>
-                <CardContent className="p-6">
-                  <CardTitle className="text-xl font-bold text-foreground">{member.name}</CardTitle>
-                  <CardDescription className="text-primary">{member.role}</CardDescription>
+                <CardContent className="p-4">
+                  <CardTitle className="text-lg font-bold text-foreground">{member.name}</CardTitle>
+                  <CardDescription className="text-sm text-primary">{member.role}</CardDescription>
                 </CardContent>
               </Card>
             );
