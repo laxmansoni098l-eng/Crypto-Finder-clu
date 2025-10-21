@@ -49,7 +49,7 @@ function BinanceIcon(props: React.SVGProps<SVGSVGElement>) {
 export function Header() {
   return (
     <header className="bg-card/80 backdrop-blur-sm sticky top-0 z-50">
-      <nav className="container mx-auto flex items-center justify-between p-4 md:px-6 border-b-2 border-primary">
+      <nav className="container mx-auto flex items-center justify-between p-4 md:px-6 border-b-2">
         <Logo />
         
         <div className="flex items-center gap-4">

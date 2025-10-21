@@ -47,7 +47,7 @@ export function TeamSection() {
           {teamMembers.map((member) => {
             const image = getTeamMemberImage(member.imageId);
             return (
-              <Card key={member.name} className="bg-card/80 border-primary/20 text-center overflow-hidden transition-all duration-300 hover:border-primary hover:-translate-y-2 hover:shadow-primary">
+              <Card key={member.name} className="bg-card/80 text-center overflow-hidden transition-all duration-300 hover:border-primary hover:-translate-y-2 hover:shadow-primary border-2">
                 <CardHeader className="p-0">
                   {image && (
                     <Image

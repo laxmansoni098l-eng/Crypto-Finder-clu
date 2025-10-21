@@ -73,7 +73,7 @@ function BinanceIcon(props: React.SVGProps<SVGSVGElement>) {
 
 export function Footer() {
   return (
-    <footer className="bg-card/80 border-t-2 border-primary mt-12">
+    <footer className="bg-card/80 border-t-2 mt-12">
       <div className="container mx-auto p-4 md:px-6">
         <div className="grid md:grid-cols-2 items-center justify-between gap-8">
             <Logo />
@@ -87,7 +87,7 @@ export function Footer() {
               ))}
             </div>
         </div>
-        <div className="mt-8 text-center text-sm text-muted-foreground border-t border-border pt-4">
+        <div className="mt-8 text-center text-sm text-muted-foreground border-t pt-4">
             © 2025 Crypto Finder Club. All rights reserved.
         </div>
       </div>

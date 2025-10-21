@@ -98,7 +98,7 @@ export function BannerSection() {
           <CarouselContent>
             {banners.map((banner, index) => (
               <CarouselItem key={index} className="flex justify-center">
-                <div className="p-2 bg-card rounded-xl border-2 border-primary/20 shadow-lg">
+                <div className="p-2 bg-card rounded-xl border-2 shadow-lg">
                   <Image
                     src={banner.src}
                     alt={banner.alt}
