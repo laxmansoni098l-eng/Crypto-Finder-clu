@@ -7,12 +7,12 @@ import { Logo } from "@/components/logo";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "#about", name: "About" },
-  { href: "#services", name: "Services" },
-  { href: "#team", name: "Team" },
-  { href: "#testimonials", name: "Testimonials" },
-  { href: "#pricing", name: "Pricing" },
-  { href: "#contact", name: "Contact" },
+  { href: "/", name: "Home" },
+  { href: "/#about", name: "About" },
+  { href: "/#services", name: "Services" },
+  { href: "/#team", name: "Team" },
+  { href: "/pricing", name: "Pricing" },
+  { href: "/#contact", name: "Contact" },
 ];
 
 const promotionContact = {
@@ -52,6 +52,18 @@ export function Header() {
       <nav className="container mx-auto flex items-center justify-between p-4 md:px-6 border-b-2">
         <Logo />
         
+        <div className="hidden md:flex items-center gap-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+        </div>
+
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-4">
             <div className="flex flex-col items-center">
@@ -78,13 +90,13 @@ export function Header() {
                   <Logo />
                    <div className="flex flex-col gap-6 items-center">
                     {navLinks.map((link) => (
-                      <a
+                      <Link
                         key={link.name}
                         href={link.href}
                         className="text-lg text-foreground hover:text-primary transition-colors"
                       >
                         <span>{link.name}</span>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                    <div className="flex flex-col items-center">
