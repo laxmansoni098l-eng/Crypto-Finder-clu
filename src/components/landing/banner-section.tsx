@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import Image from "next/image";
@@ -49,6 +50,20 @@ const banners = [
   },
 ];
 
+const MobileMockup = ({ src, alt, className }: { src: string, alt: string, className?: string }) => {
+    return (
+        <div className={cn("relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-[2.5rem] h-[300px] w-[150px] shadow-xl", className)}>
+            <div className="w-[70px] h-[10px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+            <div className="h-[20px] w-[3px] bg-gray-800 absolute -start-[11px] top-[50px] rounded-s-lg"></div>
+            <div className="h-[32px] w-[3px] bg-gray-800 absolute -start-[11px] top-[90px] rounded-s-lg"></div>
+            <div className="h-[32px] w-[3px] bg-gray-800 absolute -end-[11px] top-[100px] rounded-e-lg"></div>
+            <div className="rounded-[2rem] overflow-hidden w-full h-full bg-white dark:bg-gray-800">
+                <Image src={src} alt={alt} layout="fill" objectFit="cover" className="w-full h-full"/>
+            </div>
+        </div>
+    );
+};
+
 export function BannerSection() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
@@ -84,6 +99,11 @@ export function BannerSection() {
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 uppercase text-foreground">
           PREVIOUS <span className="text-primary">WORK</span>
         </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 justify-center items-center mb-12 max-w-4xl mx-auto">
+            <MobileMockup src={banners[0].src} alt={banners[0].alt} className="transform md:scale-90 md:-rotate-12" />
+            <MobileMockup src={banners[1].src} alt={banners[1].alt} className="transform md:scale-110 z-10" />
+            <MobileMockup src={banners[2].src} alt={banners[2].alt} className="transform md:scale-90 md:rotate-12" />
+        </div>
         <Carousel
           setApi={setApi}
           plugins={[plugin.current]}
@@ -97,13 +117,13 @@ export function BannerSection() {
         >
           <CarouselContent>
             {banners.map((banner, index) => (
-              <CarouselItem key={index} className="flex justify-center">
+              <CarouselItem key={index} className="flex justify-center md:basis-1/2 lg:basis-1/3">
                 <div className="p-2 bg-card rounded-xl border-2 shadow-lg">
                   <Image
                     src={banner.src}
                     alt={banner.alt}
-                    width={800}
-                    height={400}
+                    width={400}
+                    height={200}
                     className="object-contain rounded-lg"
                   />
                 </div>
