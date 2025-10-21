@@ -6,6 +6,7 @@ import { TrendingSection } from '@/components/landing/trending-section';
 import { TeamSection } from '@/components/landing/team-section';
 import { BannerSection } from '@/components/landing/banner-section';
 import { AboutSection } from '@/components/landing/about-section';
+import { ContactSection } from '@/components/landing/contact-section';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <AboutSection />
         <TeamSection />
         <BannerSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>
