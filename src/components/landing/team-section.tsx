@@ -10,8 +10,8 @@ import {
 
 const teamMembers = [
   {
-    name: "Alex Johnson",
-    role: "Co-Founder & CEO",
+    name: "Haris",
+    role: "CEO At Crypto Finder Club",
     imageId: "team-member-1",
   },
   {
