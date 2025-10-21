@@ -50,12 +50,12 @@ const banners = [
 
 const MobileMockup = ({ src, alt, className }: { src: string, alt: string, className?: string }) => {
     return (
-        <div className={cn("relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-[2.5rem] h-[300px] w-[150px] shadow-xl", className)}>
-            <div className="w-[70px] h-[10px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
-            <div className="h-[20px] w-[3px] bg-gray-800 absolute -start-[11px] top-[50px] rounded-s-lg"></div>
-            <div className="h-[32px] w-[3px] bg-gray-800 absolute -start-[11px] top-[90px] rounded-s-lg"></div>
-            <div className="h-[32px] w-[3px] bg-gray-800 absolute -end-[11px] top-[100px] rounded-e-lg"></div>
-            <div className="rounded-[2rem] overflow-hidden w-full h-full bg-white dark:bg-gray-800">
+        <div className={cn("relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[6px] rounded-[1.5rem] h-[240px] w-[120px] shadow-xl", className)}>
+            <div className="w-[60px] h-[8px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+            <div className="h-[18px] w-[2px] bg-gray-800 absolute -start-[8px] top-[40px] rounded-s-lg"></div>
+            <div className="h-[28px] w-[2px] bg-gray-800 absolute -start-[8px] top-[70px] rounded-s-lg"></div>
+            <div className="h-[28px] w-[2px] bg-gray-800 absolute -end-[8px] top-[80px] rounded-e-lg"></div>
+            <div className="rounded-[1.2rem] overflow-hidden w-full h-full bg-white dark:bg-gray-800">
                 <Image src={src} alt={alt} layout="fill" objectFit="cover" className="w-full h-full"/>
             </div>
         </div>
@@ -142,9 +142,9 @@ export function BannerSection() {
         </div>
 
         <div className="flex justify-center items-center max-w-4xl mx-auto" style={{ perspective: '1000px' }}>
-            <MobileMockup src={banners[0].src} alt={banners[0].alt} className="transition-transform duration-300 transform -mr-12 hover:scale-105" style={{ transform: 'rotateY(30deg) scale(0.9)' }} />
+            <MobileMockup src={banners[0].src} alt={banners[0].alt} className="transition-transform duration-300 transform -mr-10 hover:scale-105" style={{ transform: 'rotateY(30deg) scale(0.9)' }} />
             <MobileMockup src={banners[1].src} alt={banners[1].alt} className="z-10 transition-transform duration-300 transform hover:scale-105" />
-            <MobileMockup src={banners[2].src} alt={banners[2].alt} className="transition-transform duration-300 transform -ml-12 hover:scale-105" style={{ transform: 'rotateY(-30deg) scale(0.9)' }} />
+            <MobileMockup src={banners[2].src} alt={banners[2].alt} className="transition-transform duration-300 transform -ml-10 hover:scale-105" style={{ transform: 'rotateY(-30deg) scale(0.9)' }} />
         </div>
       </div>
     </section>
