@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -9,7 +10,9 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
 
 const banners = [
   {
@@ -50,6 +53,30 @@ export function BannerSection() {
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCurrent(api.selectedScrollSnap());
+
+    const onSelect = (api: CarouselApi) => {
+      setCurrent(api.selectedScrollSnap());
+    };
+
+    api.on("select", onSelect);
+
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
+  const scrollTo = (index: number) => {
+    api?.scrollTo(index);
+  };
 
   return (
     <section className="py-20">
@@ -58,6 +85,7 @@ export function BannerSection() {
           PREVIOUS <span className="text-primary">WORK</span>
         </h2>
         <Carousel
+          setApi={setApi}
           plugins={[plugin.current]}
           opts={{
             align: "start",
@@ -85,6 +113,19 @@ export function BannerSection() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+        <div className="flex justify-center gap-2 mt-4">
+          {banners.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => scrollTo(index)}
+              className={cn(
+                "h-2 w-2 rounded-full",
+                current === index ? "bg-primary" : "bg-muted"
+              )}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
