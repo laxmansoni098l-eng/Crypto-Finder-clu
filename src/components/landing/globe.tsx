@@ -32,10 +32,11 @@ export const Globe = () => {
     return (
         <div className="relative w-[500px] h-[500px] flex items-center justify-center">
             <div
-            className="absolute w-64 h-64 rounded-full"
+            className="absolute w-80 h-80 rounded-full"
             style={{
-                backgroundImage: 'url("https://i.postimg.cc/D0z3P8c7/earth-map.png")',
+                backgroundImage: 'url("https://i.postimg.cc/Hn0Y4h8y/IMG-20251021-125029-936.jpg")',
                 backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 animation: 'globe 60s linear infinite',
                 boxShadow: 'inset 0 0 20px 5px hsl(var(--primary) / 0.5), 0 0 50px -10px hsl(var(--primary))',
                 transformStyle: 'preserve-3d',
