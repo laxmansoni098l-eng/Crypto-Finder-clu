@@ -1,94 +1,130 @@
 import Link from "next/link";
-import { Send, Twitter } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import {
+  Send,
+  Twitter,
+  Link as LinkIcon,
+  Video,
+  Rss,
+  Users,
+  HelpCircle,
+  MessageSquareHeart,
+  Briefcase,
+  DollarSign,
+  Mail,
+  Code,
+  Repeat,
+  Megaphone,
+} from "lucide-react";
 import { Logo } from "@/components/logo";
-
-const navLinks = [
-  { href: "#about", name: "About" },
-  { href: "#services", name: "Services" },
-  { href: "#team", name: "Team" },
-  { href: "#testimonials", name: "Testimonials" },
-  { href: "#pricing", name: "Pricing" },
-  { href: "#contact", name: "Contact" },
-];
 
 const socialLinks = [
   {
-    href: "https://t.me/CryptoFinderClub_Ama",
-    icon: <Send className="h-5 w-5" />,
-    name: "Telegram Group",
-  },
-  {
-    href: "https://t.me/Crypto_FinderNews",
-    icon: <Send className="h-5 w-5" />,
-    name: "Telegram Channel",
+    href: "#",
+    icon: <LinkIcon className="h-5 w-5" />,
+    name: "Linktree",
   },
   {
     href: "https://x.com/Cryptofinder_01",
     icon: <Twitter className="h-5 w-5" />,
-    name: "Twitter",
+    name: "[X] Twitter",
   },
   {
     href: "https://www.binance.com/en/live/u/29226531",
-    icon: <BinanceIcon className="h-5 w-5" />,
-    name: "Binance Live",
+    icon: <Video className="h-5 w-5" />,
+    name: "Binance live",
   },
   {
-    href: "https://www.binance.com/square/profile/cryptofinder_club",
-    icon: <BinanceIcon className="h-5 w-5" />,
-    name: "Binance Feed",
+    href: "https://t.me/CryptoFinderClub_Ama",
+    icon: <Send className="h-5 w-5" />,
+    name: "Telegram chat",
+  },
+  {
+    href: "https://t.me/Crypto_FinderNews",
+    icon: <Rss className="h-5 w-5" />,
+    name: "Telegram news",
   },
 ];
 
-const promotionContact = {
-    name: "Haris",
-    title: "Contact For Promotion",
-    telegram: "Haris_ree",
-    href: "https://t.me/Haris_ree",
-};
+const sitemapLinks = [
+  { href: "/#team", icon: <Users className="h-5 w-5" />, name: "Our Team" },
+  { href: "/faq", icon: <HelpCircle className="h-5 w-5" />, name: "FAQ" },
+  { href: "/feedback", icon: <MessageSquareHeart className="h-5 w-5" />, name: "Customer Feedback" },
+  { href: "/#services", icon: <Briefcase className="h-5 w-5" />, name: "Services" },
+  { href: "/pricing", icon: <DollarSign className="h-5 w-5" />, name: "Pricing" },
+  { href: "/#contact", icon: <Mail className="h-5 w-5" />, name: "Contact" },
+  { href: "/developers", icon: <Code className="h-5 w-5" />, name: "Developer" },
+];
 
-function BinanceIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M16.25 7.75l-4.5 4.5-4.5-4.5L3 12l4.5 4.5 4.5-4.5 4.5 4.5L21 12l-4.75-4.25z" />
-      <path d="M11.75 3L3 12l8.75 9 8.75-9L11.75 3z" />
-      <path d="M5 12l-2 2" />
-      <path d="M19 12l2 2" />
-      <path d="M11.75 3l-2 2" />
-      <path d="M11.75 21l-2-2" />
-      <path d="M11.75 3l2 2" />
-      <path d="M11.75 21l2-2" />
-    </svg>
-  );
-}
+const resourcesLinks = [
+  { href: "/ama-recaps", icon: <Repeat className="h-5 w-5" />, name: "AMA Recaps" },
+  { href: "/ama-announcements", icon: <Megaphone className="h-5 w-5" />, name: "AMA Announcements" },
+];
+
 
 export function Footer() {
   return (
     <footer className="bg-card/80 border-t-2 mt-12">
-      <div className="container mx-auto p-4 md:px-6">
-        <div className="grid md:grid-cols-2 items-center justify-between gap-8">
+      <div className="container mx-auto p-8 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="md:col-span-1 mb-8 md:mb-0">
             <Logo />
-            <div className="flex items-center gap-2 justify-self-end">
-              {socialLinks.map((link) => (
-                <Button key={link.name} variant="ghost" size="icon" asChild>
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
-                    {link.icon}
-                  </a>
-                </Button>
-              ))}
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 col-span-1 md:col-span-3 gap-8">
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-foreground">Social Links</h3>
+              <ul className="space-y-3">
+                {socialLinks.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {link.icon}
+                      <span>{link.name}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-foreground">Sitemap</h3>
+              <ul className="space-y-3">
+                {sitemapLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {link.icon}
+                      <span>{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-4 text-foreground">Resources</h3>
+              <ul className="space-y-3">
+                {resourcesLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {link.icon}
+                      <span>{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
-        <div className="mt-8 text-center text-sm text-muted-foreground border-t pt-4">
-            © 2025 Crypto Finder Club. All rights reserved.
+        <div className="mt-12 text-center text-sm text-muted-foreground border-t pt-8">
+          © 2025 Crypto Finder Club. All rights reserved.
         </div>
       </div>
     </footer>
