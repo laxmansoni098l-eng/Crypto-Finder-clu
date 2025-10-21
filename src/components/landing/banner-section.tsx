@@ -1,4 +1,22 @@
 import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+const banners = [
+    {
+      src: "https://i.postimg.cc/63NXQhTz/IMG-20251021-123741-831.jpg",
+      alt: "Previous work banner",
+    },
+    {
+      src: "https://i.postimg.cc/Pxzkv88Q/IMG-20251021-123742-104.jpg",
+      alt: "Previous work banner 2",
+    },
+]
 
 export function BannerSection() {
   return (
@@ -7,22 +25,29 @@ export function BannerSection() {
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 uppercase text-foreground">
           PREVIOUS <span className="text-primary">WORK</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center items-center">
-            <Image
-              src="https://i.postimg.cc/63NXQhTz/IMG-20251021-123741-831.jpg"
-              alt="Previous work banner"
-              width={600}
-              height={300}
-              className="object-contain rounded-lg"
-            />
-            <Image
-              src="https://i.postimg.cc/Pxzkv88Q/IMG-20251021-123742-104.jpg"
-              alt="Previous work banner 2"
-              width={600}
-              height={300}
-              className="object-contain rounded-lg"
-            />
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-4xl mx-auto"
+        >
+          <CarouselContent>
+            {banners.map((banner, index) => (
+              <CarouselItem key={index} className="flex justify-center">
+                <Image
+                  src={banner.src}
+                  alt={banner.alt}
+                  width={800}
+                  height={400}
+                  className="object-contain rounded-lg"
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );
