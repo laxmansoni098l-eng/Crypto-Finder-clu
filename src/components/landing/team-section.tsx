@@ -7,12 +7,18 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
+import { Send } from "lucide-react";
 
 const teamMembers = [
   {
     name: "Haris",
     role: "CEO At Crypto Finder Club",
     imageId: "team-member-1",
+    promotionContact: {
+        title: "Contact For Promotion",
+        telegram: "Haris_ree",
+        href: "https://t.me/Haris_ree",
+    }
   },
   {
     name: "Francis Baker",
@@ -57,6 +63,12 @@ export function TeamSection() {
                 <CardContent className="p-3">
                   <CardTitle className="text-base font-bold text-foreground">{member.name}</CardTitle>
                   <CardDescription className="text-xs text-primary">{member.role}</CardDescription>
+                  {'promotionContact' in member && member.promotionContact && (
+                    <a href={member.promotionContact.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1 text-muted-foreground hover:text-primary transition-colors text-xs mt-2">
+                        <Send className="h-3 w-3" />
+                        <span>@{member.promotionContact.telegram}</span>
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             );
