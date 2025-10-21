@@ -15,8 +15,12 @@ const navLinks = [
   { href: "#contact", name: "Contact" },
 ];
 
-// This is the socialLinks array that was causing the error.
-// It has been removed in the latest version of the file.
+const promotionContact = {
+    name: "Haris",
+    title: "Contact For Promotion",
+    telegram: "Haris_ree",
+    href: "https://t.me/Haris_ree",
+};
 
 function BinanceIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -49,7 +53,14 @@ export function Header() {
         <Logo />
         
         <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-4">
+            <div className="flex flex-col items-center">
+                <p className="text-xs font-bold text-foreground">{promotionContact.title}</p>
+                <a href={promotionContact.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors text-sm">
+                    <Send className="h-4 w-4" />
+                    <span>@{promotionContact.telegram}</span>
+                </a>
+             </div>
              <Button>Get a Quote</Button>
           </div>
           {/* Mobile Menu */}
@@ -76,6 +87,13 @@ export function Header() {
                       </a>
                     ))}
                   </div>
+                   <div className="flex flex-col items-center">
+                        <p className="text-sm font-bold text-foreground">{promotionContact.title}</p>
+                        <a href={promotionContact.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                            <Send className="h-4 w-4" />
+                            <span>@{promotionContact.telegram}</span>
+                        </a>
+                    </div>
                    <Button size="lg">Get a Quote</Button>
                 </div>
               </SheetContent>
