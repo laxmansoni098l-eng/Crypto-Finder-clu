@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import Image from "next/image";
@@ -99,11 +98,7 @@ export function BannerSection() {
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 uppercase text-foreground">
           PREVIOUS <span className="text-primary">WORK</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 justify-center items-center mb-12 max-w-4xl mx-auto">
-            <MobileMockup src={banners[0].src} alt={banners[0].alt} className="transform md:scale-90 md:-rotate-12" />
-            <MobileMockup src={banners[1].src} alt={banners[1].alt} className="transform md:scale-110 z-10" />
-            <MobileMockup src={banners[2].src} alt={banners[2].alt} className="transform md:scale-90 md:rotate-12" />
-        </div>
+        
         <Carousel
           setApi={setApi}
           plugins={[plugin.current]}
@@ -113,7 +108,7 @@ export function BannerSection() {
           }}
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
-          className="w-full max-w-4xl mx-auto"
+          className="w-full max-w-4xl mx-auto mb-12"
         >
           <CarouselContent>
             {banners.map((banner, index) => (
@@ -133,7 +128,7 @@ export function BannerSection() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-        <div className="flex justify-center gap-2 mt-4">
+        <div className="flex justify-center gap-2 mb-12">
           {banners.map((_, index) => (
             <button
               key={index}
@@ -145,6 +140,12 @@ export function BannerSection() {
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 justify-center items-center max-w-4xl mx-auto">
+            <MobileMockup src={banners[0].src} alt={banners[0].alt} className="transform md:scale-90 md:-rotate-12" />
+            <MobileMockup src={banners[1].src} alt={banners[1].alt} className="transform md:scale-110 z-10" />
+            <MobileMockup src={banners[2].src} alt={banners[2].alt} className="transform md:scale-90 md:rotate-12" />
         </div>
       </div>
     </section>
