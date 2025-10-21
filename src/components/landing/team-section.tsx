@@ -29,16 +29,6 @@ const teamMembers = [
     role: "Co-Founder & CTO",
     imageId: "team-member-2",
   },
-  {
-    name: "John Doe",
-    role: "Lead Blockchain Developer",
-    imageId: "team-member-3",
-  },
-  {
-    name: "Jane Smith",
-    role: "Head of Marketing",
-    imageId: "team-member-4",
-  },
 ];
 
 function getTeamMemberImage(imageId: string) {
@@ -52,7 +42,7 @@ export function TeamSection() {
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 uppercase text-foreground">
           Meet Our <span className="text-primary">Team</span>
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto justify-center">
           {teamMembers.map((member) => {
             const image = getTeamMemberImage(member.imageId);
             return (
@@ -62,16 +52,16 @@ export function TeamSection() {
                     <Image
                       src={image.imageUrl}
                       alt={`Photo of ${member.name}`}
-                      width={400}
-                      height={400}
-                      className="w-full h-auto object-cover"
+                      width={200}
+                      height={200}
+                      className="w-full h-auto object-cover aspect-square"
                       data-ai-hint={image.imageHint}
                     />
                   )}
                 </CardHeader>
-                <CardContent className="p-4">
-                  <CardTitle className="text-lg font-bold text-foreground">{member.name}</CardTitle>
-                  <CardDescription className="text-sm text-primary">{member.role}</CardDescription>
+                <CardContent className="p-3">
+                  <CardTitle className="text-base font-bold text-foreground">{member.name}</CardTitle>
+                  <CardDescription className="text-xs text-primary">{member.role}</CardDescription>
                 </CardContent>
               </Card>
             );
