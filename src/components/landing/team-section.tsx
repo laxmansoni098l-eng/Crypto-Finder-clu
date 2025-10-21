@@ -3,9 +3,6 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import {
   Card,
   CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
 } from "@/components/ui/card";
 import { Send } from "lucide-react";
 
@@ -38,34 +35,38 @@ function getTeamMemberImage(imageId: string) {
 
 export function TeamSection() {
   return (
-    <section className="py-20 md:py-32">
+    <section id="team" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 uppercase text-foreground">
           Meet Our <span className="text-primary">Team</span>
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 max-w-4xl mx-auto justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto justify-center">
           {teamMembers.map((member) => {
             const image = getTeamMemberImage(member.imageId);
             return (
-              <Card key={member.name} className="bg-card/80 text-center overflow-hidden transition-all duration-300 hover:border-primary hover:-translate-y-2 hover:shadow-primary border-2">
-                <CardHeader className="p-0">
+              <Card key={member.name} className="bg-card/80 overflow-hidden transition-all duration-300 hover:border-primary hover:-translate-y-2 hover:shadow-primary border-2 border-border/20 rounded-xl">
+                <div className="relative">
                   {image && (
                     <Image
                       src={image.imageUrl}
                       alt={`Photo of ${member.name}`}
-                      width={200}
-                      height={200}
+                      width={400}
+                      height={400}
                       className="w-full h-auto object-cover aspect-square"
                       data-ai-hint={image.imageHint}
                     />
                   )}
-                </CardHeader>
-                <CardContent className="p-3">
-                  <CardTitle className="text-base font-bold text-foreground">{member.name}</CardTitle>
-                  <CardDescription className="text-xs text-primary">{member.role}</CardDescription>
-                  {'promotionContact' in member && member.promotionContact && (
-                    <a href={member.promotionContact.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-1 text-muted-foreground hover:text-primary transition-colors text-xs mt-2">
-                        <Send className="h-3 w-3" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                      <h3 className="text-lg font-bold">{member.name}</h3>
+                  </div>
+                </div>
+                <CardContent className="p-4 text-center">
+                  <h3 className="text-lg font-bold text-foreground">{member.name}</h3>
+                  <p className="text-sm text-primary">{member.role}</p>
+                  {member.promotionContact && (
+                    <a href={member.promotionContact.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm mt-2">
+                        <Send className="h-4 w-4" />
                         <span>@{member.promotionContact.telegram}</span>
                     </a>
                   )}
