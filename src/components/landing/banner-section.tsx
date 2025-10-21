@@ -142,10 +142,10 @@ export function BannerSection() {
           ))}
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 justify-center items-center max-w-4xl mx-auto">
-            <MobileMockup src={banners[0].src} alt={banners[0].alt} />
-            <MobileMockup src={banners[1].src} alt={banners[1].alt} />
-            <MobileMockup src={banners[2].src} alt={banners[2].alt} />
+        <div className="flex justify-center items-center max-w-4xl mx-auto" style={{ perspective: '1000px' }}>
+            <MobileMockup src={banners[0].src} alt={banners[0].alt} className="transition-transform duration-300 transform -mr-12" style={{ transform: 'rotateY(30deg) scale(0.9)' }} />
+            <MobileMockup src={banners[1].src} alt={banners[1].alt} className="z-10 transition-transform duration-300 transform hover:scale-105" />
+            <MobileMockup src={banners[2].src} alt={banners[2].alt} className="transition-transform duration-300 transform -ml-12" style={{ transform: 'rotateY(-30deg) scale(0.9)' }} />
         </div>
       </div>
     </section>
