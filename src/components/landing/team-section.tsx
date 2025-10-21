@@ -24,11 +24,6 @@ const teamMembers = [
     role: "CMO At Crypto Finder Club",
     imageId: "team-member-6",
   },
-  {
-    name: "Samantha Bee",
-    role: "Co-Founder & CTO",
-    imageId: "team-member-2",
-  },
 ];
 
 function getTeamMemberImage(imageId: string) {
@@ -42,7 +37,7 @@ export function TeamSection() {
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 uppercase text-foreground">
           Meet Our <span className="text-primary">Team</span>
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto justify-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 max-w-4xl mx-auto justify-center">
           {teamMembers.map((member) => {
             const image = getTeamMemberImage(member.imageId);
             return (
