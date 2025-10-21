@@ -16,6 +16,10 @@ const banners = [
       src: "https://i.postimg.cc/Pxzkv88Q/IMG-20251021-123742-104.jpg",
       alt: "Previous work banner 2",
     },
+    {
+      src: "https://i.postimg.cc/mDGsrShq/IMG-20251021-123742-729.jpg",
+      alt: "Previous work banner 3",
+    },
 ]
 
 export function BannerSection() {
