@@ -1,27 +1,37 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Node = ({ index, totalNodes }: { index: number, totalNodes: number }) => {
-  const angle = (index / totalNodes) * 360;
-  const animationDuration = 10 + Math.random() * 10;
-  const animationDelay = Math.random() * 5;
-  const orbitRadius = 200 + Math.random() * 50;
+  const [style, setStyle] = useState({});
+  const [nodeStyle, setNodeStyle] = useState({});
+
+  useEffect(() => {
+    const angle = (index / totalNodes) * 360;
+    const animationDuration = 10 + Math.random() * 10;
+    const animationDelay = Math.random() * 5;
+    const orbitRadius = 200 + Math.random() * 50;
+
+    setStyle({
+      transform: `rotateY(${angle}deg)`,
+      animation: `orbit ${animationDuration}s linear infinite`,
+      animationDelay: `${-animationDelay}s`,
+    });
+
+    setNodeStyle({
+      transform: `translateX(${orbitRadius}px)`,
+      boxShadow: "0 0 10px 2px hsl(var(--primary) / 0.8)",
+    });
+  }, [index, totalNodes]);
+
 
   return (
     <div
       className="absolute w-full h-full"
-      style={{
-        transform: `rotateY(${angle}deg)`,
-        animation: `orbit ${animationDuration}s linear infinite`,
-        animationDelay: `${-animationDelay}s`,
-      }}
+      style={style}
     >
       <div
         className="absolute w-3 h-3 rounded-full bg-primary top-1/2 left-1/2 -mt-1.5 -ml-1.5"
-        style={{
-          transform: `translateX(${orbitRadius}px)`,
-          boxShadow: "0 0 10px 2px hsl(var(--primary) / 0.8)",
-        }}
+        style={nodeStyle}
       />
     </div>
   );
