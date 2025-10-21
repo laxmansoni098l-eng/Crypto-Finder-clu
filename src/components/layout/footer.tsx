@@ -75,15 +75,8 @@ export function Footer() {
   return (
     <footer className="bg-card/80 border-t-2 border-primary mt-12">
       <div className="container mx-auto p-4 md:px-6">
-        <div className="grid md:grid-cols-3 items-center justify-between gap-8">
+        <div className="grid md:grid-cols-2 items-center justify-between gap-8">
             <Logo />
-             <div className="flex flex-col items-center">
-                <p className="text-sm font-bold text-foreground">{promotionContact.title}</p>
-                <a href={promotionContact.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                    <Send className="h-4 w-4" />
-                    <span>@{promotionContact.telegram}</span>
-                </a>
-             </div>
             <div className="flex items-center gap-2 justify-self-end">
               {socialLinks.map((link) => (
                 <Button key={link.name} variant="ghost" size="icon" asChild>
