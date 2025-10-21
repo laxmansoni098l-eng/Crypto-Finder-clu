@@ -20,6 +20,11 @@ const teamMembers = [
     imageId: "team-member-5",
   },
   {
+    name: "Farabi",
+    role: "CMO At Crypto Finder Club",
+    imageId: "team-member-6",
+  },
+  {
     name: "Samantha Bee",
     role: "Co-Founder & CTO",
     imageId: "team-member-2",
@@ -47,7 +52,7 @@ export function TeamSection() {
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 uppercase text-foreground">
           Meet Our <span className="text-primary">Team</span>
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
           {teamMembers.map((member) => {
             const image = getTeamMemberImage(member.imageId);
             return (

@@ -29,6 +29,12 @@
       "description": "Headshot of Francis Baker, Co-Founder",
       "imageUrl": "https://i.postimg.cc/PJbDpKty/IMG-20251021-125531-768.jpg",
       "imageHint": "co-founder headshot"
+    },
+    {
+      "id": "team-member-6",
+      "description": "Headshot of Farabi, CMO",
+      "imageUrl": "https://i.postimg.cc/2Sg5YhYf/IMG-20251021-125537-059.jpg",
+      "imageHint": "cmo headshot"
     }
   ]
 }
