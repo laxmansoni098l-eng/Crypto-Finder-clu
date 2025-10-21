@@ -8,7 +8,7 @@ export function Logo() {
         alt="Crypto Finder Club Logo"
         width={40}
         height={40}
-        className="rounded-md border-2 border-primary/50"
+        className="rounded-md border-2 border-primary/50 aspect-square"
       />
       <div className="flex flex-col">
         <span className="font-bold uppercase tracking-widest text-lg text-foreground">
