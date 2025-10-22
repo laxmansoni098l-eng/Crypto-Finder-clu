@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 
 const banners = [
   {
-    src: "https://i.postimg.cc/63NXQhTz/IMG-20251021-123741-831.jpg",
+    src: "https://i.postimg.cc/D07TSYK2/IMG-20251022-090704-141.jpg",
     alt: "Previous work banner",
   },
   {
