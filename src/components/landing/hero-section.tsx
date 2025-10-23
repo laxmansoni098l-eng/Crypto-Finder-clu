@@ -37,7 +37,7 @@ export function HeroSection() {
           </div>
           <div className="relative hidden md:flex justify-center items-center h-[500px]">
             <Image
-              src="https://i.postimg.cc/9f1qfdBc/1760844854162.png"
+              src="https://i.postimg.cc/GtBjn7G7/1760844854162.png"
               alt="Crypto Finder Club Hero Image"
               layout="fill"
               objectFit="contain"
