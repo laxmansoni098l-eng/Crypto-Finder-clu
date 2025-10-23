@@ -20,13 +20,10 @@ const banners = [
 
 const MobileMockup = ({ src, alt, className }: { src: string, alt: string, className?: string }) => {
     return (
-        <div className={cn("relative mx-auto border-gray-900 bg-gray-900 border-[8px] rounded-[2.5rem] h-[300px] w-[150px] shadow-2xl", className)}>
-            <div className="w-[70px] h-[10px] bg-gray-900 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
-            <div className="h-[20px] w-[2px] bg-gray-900 absolute -start-[10px] top-[50px] rounded-s-lg"></div>
-            <div className="h-[30px] w-[2px] bg-gray-900 absolute -start-[10px] top-[90px] rounded-s-lg"></div>
-            <div className="h-[30px] w-[2px] bg-gray-900 absolute -end-[10px] top-[100px] rounded-e-lg"></div>
+        <div className={cn("relative mx-auto bg-zinc-900 border-zinc-700 border-[10px] rounded-[2.5rem] h-[320px] w-[160px] shadow-2xl shadow-primary/20", className)}>
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 bg-zinc-900 rounded-full z-20"></div>
             <div className="rounded-[2rem] overflow-hidden w-full h-full bg-background">
-                <Image src={src} alt={alt} layout="fill" objectFit="cover" className="w-full h-full"/>
+                <Image src={src} alt={alt} layout="fill" objectFit="contain" className="w-full h-full p-1"/>
             </div>
         </div>
     );
@@ -39,15 +36,15 @@ export function MobileMockupSection() {
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 uppercase text-foreground">
                 Showcasing our <span className="text-primary">Impact</span>
             </h2>
-            <div className="flex justify-center items-center max-w-4xl mx-auto" style={{ perspective: '1200px' }}>
-                <div className="transition-transform duration-500 transform-gpu hover:scale-110 hover:-translate-y-4" style={{ transform: 'rotateY(25deg) scale(0.95)', transformStyle: 'preserve-3d' }}>
-                    <MobileMockup src={banners[0].src} alt={banners[0].alt} className="shadow-primary/20" />
+            <div className="relative flex justify-center items-center h-[400px] w-full max-w-4xl mx-auto group">
+                <div className="absolute transition-all duration-500 ease-in-out transform group-hover:-translate-x-24 group-hover:rotate-[-15deg] group-hover:scale-105">
+                     <MobileMockup src={banners[0].src} alt={banners[0].alt} />
                 </div>
-                <div className="z-10 transition-transform duration-500 transform-gpu hover:scale-110 hover:-translate-y-4" style={{ transformStyle: 'preserve-3d' }}>
-                    <MobileMockup src={banners[1].src} alt={banners[1].alt} className="shadow-primary/40" />
+                <div className="absolute z-10 transition-all duration-500 ease-in-out transform group-hover:scale-110 group-hover:-translate-y-4">
+                    <MobileMockup src={banners[1].src} alt={banners[1].alt} />
                 </div>
-                <div className="transition-transform duration-500 transform-gpu hover:scale-110 hover:-translate-y-4" style={{ transform: 'rotateY(-25deg) scale(0.95)', transformStyle: 'preserve-3d' }}>
-                    <MobileMockup src={banners[2].src} alt={banners[2].alt} className="shadow-primary/20" />
+                <div className="absolute transition-all duration-500 ease-in-out transform group-hover:translate-x-24 group-hover:rotate-[15deg] group-hover:scale-105">
+                     <MobileMockup src={banners[2].src} alt={banners[2].alt} />
                 </div>
             </div>
         </div>
