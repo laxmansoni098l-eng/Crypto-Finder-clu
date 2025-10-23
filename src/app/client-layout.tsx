@@ -11,6 +11,7 @@ export default function ClientLayout({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // This will only run on the client
     const timer = setTimeout(() => {
       setLoading(false);
     }, 5000); // 5 seconds
