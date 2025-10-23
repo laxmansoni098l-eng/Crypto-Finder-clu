@@ -12,29 +12,44 @@ import { ExternalLink, Repeat } from "lucide-react";
 
 const recapLinks = [
   {
-    title: "AMA Recap: Exciting Project Alpha",
-    date: "October 26, 2023",
-    url: "https://t.me/Crypto_FinderNews/4981",
+    title: "AMA Recap: Project VETRA",
+    date: "November 24, 2024",
+    url: "https://t.me/Crypto_FinderNews/4656",
   },
   {
-    title: "AMA Recap: Insights from Project Beta",
-    date: "December 15, 2023",
-    url: "https://t.me/Crypto_FinderNews/5393",
+    title: "AMA Recap: Project MIRA",
+    date: "January 3, 2025",
+    url: "https://t.me/Crypto_FinderNews/4921",
   },
   {
-    title: "AMA Recap: Exploring Project Gamma",
-    date: "February 28, 2024",
-    url: "https://t.me/Crypto_FinderNews/5732",
+    title: "AMA Recap: Project CHAI",
+    date: "January 9, 2025",
+    url: "https://t.me/Crypto_FinderNews/4967",
   },
   {
-    title: "AMA Recap: The Future of Project Delta",
-    date: "March 5, 2024",
-    url: "https://t.me/Crypto_FinderNews/5754",
+    title: "AMA Recap: Project SmartMall",
+    date: "February 27, 2025",
+    url: "https://t.me/Crypto_FinderNews/5173",
   },
   {
-    title: "AMA Recap: Deep Dive into Project Epsilon",
-    date: "April 12, 2024",
-    url: "https://t.me/Crypto_FinderNews/5876",
+    title: "AMA Recap: Project JF JuFinance",
+    date: "August 2, 2025",
+    url: "https://t.me/Crypto_FinderNews/5742",
+  },
+  {
+    title: "AMA Recap: Project Aether",
+    date: "August 5, 2025",
+    url: "https://t.me/Crypto_FinderNews/5746",
+  },
+  {
+    title: "AMA Recap: Project Nova",
+    date: "September 1, 2025",
+    url: "https://t.me/Crypto_FinderNews/5895",
+  },
+  {
+    title: "AMA Recap: Project Orion",
+    date: "September 5, 2025",
+    url: "https://t.me/Crypto_FinderNews/5901",
   },
 ];
 
