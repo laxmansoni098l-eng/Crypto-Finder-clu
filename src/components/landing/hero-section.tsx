@@ -37,7 +37,7 @@ export function HeroSection() {
           </div>
           <div className="flex justify-center">
             <Image
-              src="https://i.postimg.cc/85tdq83Q/IMG-20251023-072436.jpg"
+              src="https://i.postimg.cc/9f1qfdBc/1760844854162.png"
               alt="Web3 Media Powerhouse"
               width={500}
               height={500}
