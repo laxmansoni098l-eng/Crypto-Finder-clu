@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -16,13 +17,15 @@ export function HeroSection() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
           <div className="relative mb-8 h-[250px] w-[250px] md:h-[400px] md:w-[400px] flex justify-center items-center">
-            <Image
-                src="https://i.postimg.cc/GtBjn7G7/1760844854162.png"
-                alt="Web3 Media Powerhouse"
-                width={400}
-                height={400}
-                className="object-contain"
-              />
+            <div className="p-4 bg-card/80 rounded-xl border-2 border-primary/20 shadow-lg">
+                <Image
+                    src="https://i.postimg.cc/GtBjn7G7/1760844854162.png"
+                    alt="Web3 Media Powerhouse"
+                    width={400}
+                    height={400}
+                    className="object-contain rounded-md"
+                />
+            </div>
           </div>
           <div>
             <h1 className="font-headline font-bold text-4xl md:text-6xl lg:text-7xl !leading-tight uppercase">
