@@ -10,11 +10,6 @@ import { Eye } from 'lucide-react';
 
 const previousWorkItems = [
   {
-    src: "https://i.postimg.cc/D07TSYK2/IMG-20251022-090704-141.jpg",
-    alt: "Previous work banner",
-    title: "Project Alpha Showcase",
-  },
-  {
     src: "https://i.postimg.cc/Pxzkv88Q/IMG-20251021-123742-104.jpg",
     alt: "Previous work banner 2",
     title: "Project Beta Campaign",
