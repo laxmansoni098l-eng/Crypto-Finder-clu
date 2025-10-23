@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Globe } from "@/components/landing/globe";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
@@ -15,7 +15,7 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-center md:text-left order-2 md:order-1">
+          <div className="text-center md:text-left">
             <h1 className="font-headline font-bold text-4xl md:text-6xl lg:text-7xl !leading-tight uppercase">
               <span className="text-primary">Your Premier</span>
               <br />
@@ -35,8 +35,14 @@ export function HeroSection() {
               Get a Quote
             </Button>
           </div>
-          <div className="flex justify-center order-1 md:order-2">
-            <Globe />
+          <div className="flex justify-center">
+            <Image
+              src="https://i.postimg.cc/85tdq83Q/IMG-20251023-072436.jpg"
+              alt="Web3 Media Powerhouse"
+              width={500}
+              height={500}
+              className="rounded-lg shadow-2xl"
+            />
           </div>
         </div>
       </div>
