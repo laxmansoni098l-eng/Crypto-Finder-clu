@@ -20,13 +20,13 @@ const banners = [
 
 const MobileMockup = ({ src, alt, className }: { src: string, alt: string, className?: string }) => {
     return (
-        <div className={cn("relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[6px] rounded-[1.5rem] h-[240px] w-[120px] shadow-xl", className)}>
-            <div className="w-[60px] h-[8px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
-            <div className="h-[18px] w-[2px] bg-gray-800 absolute -start-[8px] top-[40px] rounded-s-lg"></div>
-            <div className="h-[28px] w-[2px] bg-gray-800 absolute -start-[8px] top-[70px] rounded-s-lg"></div>
-            <div className="h-[28px] w-[2px] bg-gray-800 absolute -end-[8px] top-[80px] rounded-e-lg"></div>
-            <div className="rounded-[1.2rem] overflow-hidden w-full h-full bg-white dark:bg-gray-800">
-                <Image src={src} alt={alt} layout="fill" objectFit="contain" className="w-full h-full"/>
+        <div className={cn("relative mx-auto border-gray-900 bg-gray-900 border-[8px] rounded-[2.5rem] h-[300px] w-[150px] shadow-2xl", className)}>
+            <div className="w-[70px] h-[10px] bg-gray-900 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+            <div className="h-[20px] w-[2px] bg-gray-900 absolute -start-[10px] top-[50px] rounded-s-lg"></div>
+            <div className="h-[30px] w-[2px] bg-gray-900 absolute -start-[10px] top-[90px] rounded-s-lg"></div>
+            <div className="h-[30px] w-[2px] bg-gray-900 absolute -end-[10px] top-[100px] rounded-e-lg"></div>
+            <div className="rounded-[2rem] overflow-hidden w-full h-full bg-background">
+                <Image src={src} alt={alt} layout="fill" objectFit="cover" className="w-full h-full"/>
             </div>
         </div>
     );
@@ -34,14 +34,23 @@ const MobileMockup = ({ src, alt, className }: { src: string, alt: string, class
 
 export function MobileMockupSection() {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-center items-center max-w-4xl mx-auto" style={{ perspective: '1000px' }}>
-            <MobileMockup src={banners[0].src} alt={banners[0].alt} className="transition-transform duration-300 transform -mr-10 hover:scale-105" style={{ transform: 'rotateY(30deg) scale(0.9)' }} />
-            <MobileMockup src={banners[1].src} alt={banners[1].alt} className="z-10 transition-transform duration-300 transform hover:scale-105" />
-            <MobileMockup src={banners[2].src} alt={banners[2].alt} className="transition-transform duration-300 transform -ml-10 hover:scale-105" style={{ transform: 'rotateY(-30deg) scale(0.9)' }} />
+    <section className="py-20 md:py-32">
+        <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 uppercase text-foreground">
+                Showcasing our <span className="text-primary">Impact</span>
+            </h2>
+            <div className="flex justify-center items-center max-w-4xl mx-auto" style={{ perspective: '1200px' }}>
+                <div className="transition-transform duration-500 transform-gpu hover:scale-110 hover:-translate-y-4" style={{ transform: 'rotateY(25deg) scale(0.95)', transformStyle: 'preserve-3d' }}>
+                    <MobileMockup src={banners[0].src} alt={banners[0].alt} className="shadow-primary/20" />
+                </div>
+                <div className="z-10 transition-transform duration-500 transform-gpu hover:scale-110 hover:-translate-y-4" style={{ transformStyle: 'preserve-3d' }}>
+                    <MobileMockup src={banners[1].src} alt={banners[1].alt} className="shadow-primary/40" />
+                </div>
+                <div className="transition-transform duration-500 transform-gpu hover:scale-110 hover:-translate-y-4" style={{ transform: 'rotateY(-25deg) scale(0.95)', transformStyle: 'preserve-3d' }}>
+                    <MobileMockup src={banners[2].src} alt={banners[2].alt} className="shadow-primary/20" />
+                </div>
+            </div>
         </div>
-      </div>
     </section>
   );
 }
