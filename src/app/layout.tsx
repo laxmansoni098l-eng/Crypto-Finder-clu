@@ -2,6 +2,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import React from 'react'
+import { MatrixRain } from '@/components/layout/matrix-rain'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -15,7 +16,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <title>Crypto Finder Club</title>
       </head>
-      <body>{children}</body>
+      <body>
+        <MatrixRain />
+        {children}
+      </body>
     </html>
   )
 }

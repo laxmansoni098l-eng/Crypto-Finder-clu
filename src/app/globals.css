@@ -10,19 +10,19 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 2%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 84.2% 60.2%;
+    --primary: 35 92% 55%; /* Gold/Orange */
     --primary-foreground: 0 0% 98%;
-    --secondary: 0 72% 51%;
+    --secondary: 145 84% 40%; /* Green */
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 60%;
-    --accent: 0 84.2% 60.2%;
+    --accent: 35 92% 55%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 84.2% 60.2%;
+    --border: 35 92% 55%;
     --input: 0 0% 10%;
-    --ring: 0 84.2% 60.2%;
+    --ring: 35 92% 55%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -45,19 +45,19 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 2%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 84.2% 60.2%;
+    --primary: 35 92% 55%; /* Gold/Orange */
     --primary-foreground: 0 0% 98%;
-    --secondary: 0 72% 51%;
+    --secondary: 145 84% 40%; /* Green */
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 60%;
-    --accent: 0 84.2% 60.2%;
+    --accent: 35 92% 55%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 84.2% 60.2%;
+    --border: 35 92% 55%;
     --input: 0 0% 10%;
-    --ring: 0 84.2% 60.2%;
+    --ring: 35 92% 55%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -87,45 +87,21 @@
     overflow: hidden;
   }
 
-  .dark body::before,
-  .dark body::after {
+  .dark body::before {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -2;
     pointer-events: none;
-    background-size: 300% 300%;
-    animation: gradientAnimation 20s ease infinite;
+    background: radial-gradient(
+      ellipse at top,
+      hsl(0 100% 50% / 0.3),
+      transparent 60%
+    );
   }
-  
-  .dark body::before {
-    background-image: 
-        radial-gradient(circle at top left, hsl(var(--primary) / 0.1), transparent 40%),
-        radial-gradient(circle at bottom right, hsl(var(--secondary) / 0.1), transparent 40%);
-  }
-
-  .dark body::after {
-    background-image: 
-      repeating-linear-gradient(45deg, hsl(var(--primary) / 0.02), hsl(var(--primary) / 0.02) 1px, transparent 1px, transparent 40px),
-      repeating-linear-gradient(-45deg, hsl(var(--primary) / 0.02), hsl(var(--primary) / 0.02) 1px, transparent 1px, transparent 40px);
-    background-size: 80px 80px, 80px 80px;
-    animation: gradientAnimation 20s ease infinite, gridAnimation 15s linear infinite;
-    animation-direction: normal, reverse;
-  }
-}
-
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes gridAnimation {
-  from { background-position: 0 0, 0 0; }
-  to { background-position: 80px 0, -80px 0; }
 }
 
 
@@ -191,4 +167,10 @@
 
 .animate-fade-in {
   animation: fade-in 0.5s ease-in forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
 }
