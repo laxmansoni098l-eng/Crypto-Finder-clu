@@ -8,6 +8,7 @@ import { AboutSection } from '@/components/landing/about-section';
 import { TeamSection } from '@/components/landing/team-section';
 import { PartnersSection } from '@/components/landing/partners-section';
 import { MobileMockupSection } from '@/components/landing/mobile-mockup-section';
+import { ExperienceSection } from '@/components/landing/experience-section';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <TrendingSection />
         <PlatformStatusBadges />
         <HeroSection />
+        <ExperienceSection />
         <BannerSection />
         <AboutSection />
         <TeamSection />
