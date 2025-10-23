@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import { Toaster } from "@/components/ui/toaster";
 import './globals.css';
 import { Space_Grotesk } from 'next/font/google';
+import { Providers } from './providers';
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ['latin'],
@@ -21,8 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} dark`}>
       <body className="font-body antialiased bg-background text-foreground">
-        {children}
-        <Toaster />
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
