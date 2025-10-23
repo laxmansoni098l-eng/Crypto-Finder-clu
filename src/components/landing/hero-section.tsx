@@ -42,6 +42,7 @@ export function HeroSection() {
               width={500}
               height={500}
               className="rounded-lg shadow-2xl"
+              priority
             />
           </div>
         </div>
