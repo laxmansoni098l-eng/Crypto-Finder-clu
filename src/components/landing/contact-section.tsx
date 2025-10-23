@@ -39,7 +39,7 @@ export function ContactSection() {
                 >
                   <Send className="h-6 w-6 text-primary" />
                   <span className="text-lg text-foreground">
-                    Send Message on TG
+                    Telegram: @Haris_ree
                   </span>
                 </a>
                 <a
@@ -47,7 +47,7 @@ export function ContactSection() {
                   className="flex items-center gap-4 p-4 rounded-lg hover:bg-muted transition-colors"
                 >
                   <Mail className="h-6 w-6 text-primary" />
-                  <span className="text-lg text-foreground">Email us</span>
+                  <span className="text-lg text-foreground break-all">Cryptofinderclub15@gmail.Com</span>
                 </a>
               </CardContent>
             </Card>
