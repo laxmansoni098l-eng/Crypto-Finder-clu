@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { Globe } from "./globe";
 
 export function HeroSection() {
   return (
@@ -35,15 +35,8 @@ export function HeroSection() {
               Get a Quote
             </Button>
           </div>
-          <div className="flex justify-center">
-            <Image
-              src="https://i.postimg.cc/9f1qfdBc/1760844854162.png"
-              alt="Web3 Media Powerhouse"
-              width={500}
-              height={500}
-              className="rounded-lg shadow-2xl"
-              priority
-            />
+          <div className="hidden md:flex justify-center items-center">
+            <Globe />
           </div>
         </div>
       </div>
