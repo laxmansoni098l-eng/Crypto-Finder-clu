@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Globe } from "./globe";
 
 export function HeroSection() {
   return (
@@ -37,7 +36,13 @@ export function HeroSection() {
             </Button>
           </div>
           <div className="relative hidden md:flex justify-center items-center h-[500px]">
-            <Globe />
+            <Image
+                src="https://i.postimg.cc/vBgksxQQ/1760844854162.png"
+                alt="Web3 Media Powerhouse"
+                width={500}
+                height={500}
+                className="object-contain"
+              />
           </div>
         </div>
       </div>
