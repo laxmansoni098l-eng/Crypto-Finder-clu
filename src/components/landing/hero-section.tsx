@@ -42,7 +42,7 @@ export function HeroSection() {
                 alt="Crypto Finder Club Hero Image"
                 layout="fill"
                 objectFit="contain"
-                className="opacity-20"
+                className="opacity-40"
                 priority
             />
             <div className="absolute inset-0 flex justify-center items-center">
