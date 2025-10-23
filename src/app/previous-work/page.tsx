@@ -47,7 +47,7 @@ const previousWorkItems = [
 
 export default function PreviousWorkPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-grow">
         <section className="py-20 md:py-32">

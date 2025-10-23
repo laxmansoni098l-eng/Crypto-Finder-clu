@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 export default function ContactPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
+    <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-grow">
         <section id="contact" className="py-20 md:py-32">

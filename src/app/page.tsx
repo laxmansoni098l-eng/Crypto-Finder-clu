@@ -31,7 +31,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-background animate-fade-in">
+    <div className="flex min-h-screen flex-col animate-fade-in">
       <Header />
       <main className="flex-grow">
         <TrendingSection />
