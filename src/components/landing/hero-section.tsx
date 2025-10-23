@@ -37,7 +37,7 @@ export function HeroSection() {
           </div>
           <div className="relative hidden md:flex justify-center items-center h-[500px]">
             <Image
-                src="https://i.postimg.cc/vBgksxQQ/1760844854162.png"
+                src="https://i.postimg.cc/GtBjn7G7/1760844854162.png"
                 alt="Web3 Media Powerhouse"
                 width={500}
                 height={500}
