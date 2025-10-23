@@ -1,4 +1,3 @@
-
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Briefcase, Zap, Megaphone, BarChart, Users, ShieldCheck } from 'lucide-react';

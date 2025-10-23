@@ -10,7 +10,6 @@ import { PartnersSection } from '@/components/landing/partners-section';
 import { MobileMockupSection } from '@/components/landing/mobile-mockup-section';
 import { ContactSection } from '@/components/landing/contact-section';
 
-
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
