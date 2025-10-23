@@ -36,6 +36,46 @@ const announcementLinks = [
     date: "April 11, 2024",
     url: "https://t.me/Crypto_FinderNews/5876",
   },
+  {
+    title: "AMA Announcement: Project Zeta",
+    date: "July 15, 2023",
+    url: "https://t.me/Crypto_FinderNews/4656",
+  },
+  {
+    title: "AMA Announcement: Project Eta",
+    date: "September 5, 2023",
+    url: "https://t.me/Crypto_FinderNews/4921",
+  },
+  {
+    title: "AMA Announcement: Project Theta",
+    date: "September 28, 2023",
+    url: "https://t.me/Crypto_FinderNews/4967",
+  },
+  {
+    title: "AMA Announcement: Project Iota",
+    date: "November 20, 2023",
+    url: "https://t.me/Crypto_FinderNews/5173",
+  },
+  {
+    title: "AMA Announcement: Project Kappa",
+    date: "March 3, 2024",
+    url: "https://t.me/Crypto_FinderNews/5742",
+  },
+  {
+    title: "AMA Announcement: Project Lambda",
+    date: "March 5, 2024",
+    url: "https://t.me/Crypto_FinderNews/5746",
+  },
+  {
+    title: "AMA Announcement: Project Mu",
+    date: "April 20, 2024",
+    url: "https://t.me/Crypto_FinderNews/5895",
+  },
+  {
+    title: "AMA Announcement: Project Nu",
+    date: "April 22, 2024",
+    url: "https://t.me/Crypto_FinderNews/5901",
+  },
 ];
 
 export default function AmaAnnouncementsPage() {
