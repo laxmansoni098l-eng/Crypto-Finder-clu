@@ -18,7 +18,7 @@ const Stream = ({ streamId }: { streamId: number }) => {
         const leftPosition = Math.random() * 100;
         
         const isCrypto = Math.random() < 0.2; // 20% chance to be a crypto stream
-        const streamColor = isCrypto ? 'text-primary' : 'text-secondary';
+        const streamColor = isCrypto ? 'text-primary' : 'text-primary';
 
         let interval: NodeJS.Timeout;
 
@@ -62,7 +62,7 @@ const Stream = ({ streamId }: { streamId: number }) => {
         >
             {charStream.map((char, index) => {
                 const isCrypto = typeof char === 'string' && cryptoSymbols.includes(char);
-                const color = isCrypto ? 'text-primary' : 'text-secondary';
+                const color = isCrypto ? 'text-primary' : 'text-primary';
                 const opacity = index === charStream.length -1 ? 1 : Math.max(0.1, (index / charStream.length) * 0.8);
 
                 return (
