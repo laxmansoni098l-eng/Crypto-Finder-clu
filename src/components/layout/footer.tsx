@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import {
   Send,
@@ -14,6 +15,7 @@ import {
   Code,
   Repeat,
   Megaphone,
+  Archive,
 } from "lucide-react";
 import { Logo } from "@/components/logo";
 
@@ -58,6 +60,7 @@ const sitemapLinks = [
 const resourcesLinks = [
   { href: "/ama-recaps", icon: <Repeat className="h-5 w-5" />, name: "AMA Recaps" },
   { href: "/ama-announcements", icon: <Megaphone className="h-5 w-5" />, name: "AMA Announcements" },
+  { href: "/previous-work", icon: <Archive className="h-5 w-5" />, name: "Previous Work" },
 ];
 
 
