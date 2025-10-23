@@ -1,17 +1,13 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import { Space_Grotesk } from 'next/font/google';
-import { Providers } from './providers';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Providers } from "./providers";
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  variable: '--font-space-grotesk',
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Crypto Finder Club | The Best Launchpad',
-  description:
-    'The most advanced decentralized launchpad for next-generation blockchain projects.',
+  title: "Crypto Finder Club | The Future of Trading",
+  description: "The most advanced crypto tracking platform for modern traders.",
 };
 
 export default function RootLayout({
@@ -20,12 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${spaceGrotesk.variable} dark`}
-      suppressHydrationWarning
-    >
-      <body className="font-body antialiased bg-background text-foreground">
+    <html lang="en">
+      <body className={inter.className}>
         <Providers>{children}</Providers>
       </body>
     </html>
