@@ -5,16 +5,16 @@ import { cn } from "@/lib/utils";
 
 const banners = [
     {
-      src: "https://i.postimg.cc/mDGsrShq/IMG-20251021-123742-729.jpg",
-      alt: "Previous work banner 3",
+      src: "https://i.postimg.cc/4yXfHq4B/IMG-20251022-090702-397.jpg",
+      alt: "Mobile mockup image 1",
     },
     {
-      src: "https://i.postimg.cc/2yRMGjnL/IMG-20251021-123741-896.jpg",
-      alt: "Previous work banner 4",
+      src: "https://i.postimg.cc/0QY5QPvK/IMG-20251022-090704-141.jpg",
+      alt: "Mobile mockup image 2",
     },
     {
-      src: "https://i.postimg.cc/pTtHdByS/IMG-20251021-123742-208.jpg",
-      alt: "Previous work banner 5",
+      src: "https://i.postimg.cc/ZqyKG6Dj/IMG-20251022-090705-601.jpg",
+      alt: "Mobile mockup image 3",
     },
   ];
 
