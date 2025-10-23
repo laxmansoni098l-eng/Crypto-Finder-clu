@@ -21,3 +21,15 @@ export function Logo() {
     </div>
   );
 }
+
+export function LoaderLogo() {
+  return (
+    <Image
+      src="https://i.postimg.cc/Hn0Y4h8y/IMG-20251021-125029-936.jpg"
+      alt="Crypto Finder Club Logo"
+      width={80}
+      height={80}
+      className="rounded-full border-4 border-primary/50 aspect-square"
+    />
+  );
+}
