@@ -3,7 +3,7 @@ import Image from "next/image";
 const partners = [
   {
     name: "Partner 1",
-    logoUrl: "https://i.postimg.cc/DyWmTVDm/1761183628117.png",
+    logoUrl: "https://i.postimg.cc/85tdq83Q/IMG-20251023-072436.jpg",
   },
 ];
 
@@ -25,7 +25,7 @@ export function PartnersSection() {
                 alt={partner.name}
                 width={150}
                 height={75}
-                className="object-contain filter grayscale hover:grayscale-0"
+                className="object-contain"
               />
             </div>
           ))}
