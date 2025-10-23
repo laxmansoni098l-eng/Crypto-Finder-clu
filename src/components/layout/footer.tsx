@@ -52,7 +52,7 @@ const sitemapLinks = [
   { href: "/faq", icon: <HelpCircle className="h-5 w-5" />, name: "FAQ" },
   { href: "/services", icon: <Briefcase className="h-5 w-5" />, name: "Services" },
   { href: "/pricing", icon: <DollarSign className="h-5 w-5" />, name: "Pricing" },
-  { href: "/#contact", icon: <Mail className="h-5 w-5" />, name: "Contact" },
+  { href: "/contact", icon: <Mail className="h-5 w-5" />, name: "Contact" },
 ];
 
 const resourcesLinks = [

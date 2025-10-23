@@ -8,7 +8,6 @@ import { AboutSection } from '@/components/landing/about-section';
 import { TeamSection } from '@/components/landing/team-section';
 import { PartnersSection } from '@/components/landing/partners-section';
 import { MobileMockupSection } from '@/components/landing/mobile-mockup-section';
-import { ContactSection } from '@/components/landing/contact-section';
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
         <TeamSection />
         <PartnersSection />
         <MobileMockupSection />
-        <ContactSection />
       </main>
       <Footer />
     </div>
