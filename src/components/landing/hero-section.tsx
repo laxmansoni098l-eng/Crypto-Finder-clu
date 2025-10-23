@@ -16,13 +16,13 @@ export function HeroSection() {
 
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center">
-          <div className="relative mb-8 h-[250px] w-[250px] md:h-[400px] md:w-[400px] flex justify-center items-center">
+          <div className="relative mb-8 h-[300px] w-[300px] md:h-[450px] md:w-[450px] flex justify-center items-center">
             <div className="p-4 bg-card/80 rounded-xl border-2 border-primary/20 shadow-lg">
                 <Image
                     src="https://i.postimg.cc/GtBjn7G7/1760844854162.png"
                     alt="Web3 Media Powerhouse"
-                    width={400}
-                    height={400}
+                    width={450}
+                    height={450}
                     className="object-contain rounded-md"
                 />
             </div>
