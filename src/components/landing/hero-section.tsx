@@ -14,8 +14,17 @@ export function HeroSection() {
       />
 
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-center md:text-left">
+        <div className="flex flex-col items-center text-center">
+          <div className="relative mb-8 h-[250px] w-[250px] md:h-[400px] md:w-[400px] flex justify-center items-center">
+            <Image
+                src="https://i.postimg.cc/GtBjn7G7/1760844854162.png"
+                alt="Web3 Media Powerhouse"
+                width={400}
+                height={400}
+                className="object-contain"
+              />
+          </div>
+          <div>
             <h1 className="font-headline font-bold text-4xl md:text-6xl lg:text-7xl !leading-tight uppercase">
               <span className="text-primary">Your Premier</span>
               <br />
@@ -23,7 +32,7 @@ export function HeroSection() {
               <br />
               <span className="text-primary">Powerhouse</span>
             </h1>
-            <p className="mt-6 max-w-2xl mx-auto md:mx-0 text-lg text-muted-foreground">
+            <p className="mt-6 max-w-2xl mx-auto text-lg text-muted-foreground">
               From community engagement to strategic partnerships, we provide the
               fuel for your project's journey to the moon. Relax, we handle it
               all.
@@ -34,15 +43,6 @@ export function HeroSection() {
             >
               Get a Quote
             </Button>
-          </div>
-          <div className="relative hidden md:flex justify-center items-center h-[500px]">
-            <Image
-                src="https://i.postimg.cc/GtBjn7G7/1760844854162.png"
-                alt="Web3 Media Powerhouse"
-                width={500}
-                height={500}
-                className="object-contain"
-              />
           </div>
         </div>
       </div>
