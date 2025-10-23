@@ -44,7 +44,7 @@ import Autoplay from "embla-carousel-autoplay";
     );
 
     return (
-      <section className="py-20 md:py-32">
+      <section id="feedback" className="py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <MessageSquareQuote className="h-12 w-12 mx-auto text-primary mb-4" />
