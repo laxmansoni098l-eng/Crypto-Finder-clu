@@ -7,7 +7,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { HelpCircle } from "lucide-react";
-import { Providers } from '../providers';
 
 const faqs = [
   {
@@ -38,38 +37,36 @@ const faqs = [
 
 export default function FaqPage() {
   return (
-    <Providers>
-      <div className="flex min-h-screen flex-col bg-background">
-        <Header />
-        <main className="flex-grow">
-          <section className="py-20 md:py-32">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-12">
-                  <HelpCircle className="h-12 w-12 mx-auto text-primary mb-4" />
-                  <h2 className="text-3xl md:text-5xl font-bold uppercase text-foreground">
-                      Frequently Asked <span className="text-primary">Questions</span>
-                  </h2>
-                  <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                      Find answers to common questions about our services and community.
-                  </p>
-              </div>
-              <div className="max-w-3xl mx-auto">
-                <Accordion type="single" collapsible className="w-full">
-                  {faqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`item-${index}`} className="bg-card/80 border-2 border-border/20 rounded-lg mb-4 px-4 transition-all duration-300 hover:border-primary">
-                      <AccordionTrigger className="text-left font-bold text-lg text-foreground hover:no-underline">{faq.question}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground pt-2">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
+    <div className="flex min-h-screen flex-col bg-background">
+      <Header />
+      <main className="flex-grow">
+        <section className="py-20 md:py-32">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+                <HelpCircle className="h-12 w-12 mx-auto text-primary mb-4" />
+                <h2 className="text-3xl md:text-5xl font-bold uppercase text-foreground">
+                    Frequently Asked <span className="text-primary">Questions</span>
+                </h2>
+                <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+                    Find answers to common questions about our services and community.
+                </p>
             </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
-    </Providers>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-card/80 border-2 border-border/20 rounded-lg mb-4 px-4 transition-all duration-300 hover:border-primary">
+                    <AccordionTrigger className="text-left font-bold text-lg text-foreground hover:no-underline">{faq.question}</AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground pt-2">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }
