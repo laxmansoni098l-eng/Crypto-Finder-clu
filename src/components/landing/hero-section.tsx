@@ -37,16 +37,16 @@ export function HeroSection() {
             </Button>
           </div>
           <div className="relative hidden md:flex justify-center items-center h-[500px]">
-            <Image 
-                src="https://i.postimg.cc/9f1qfdBc/1760844854162.png"
-                alt="Crypto Finder Club Hero Image"
-                layout="fill"
-                objectFit="contain"
-                className="opacity-40"
-                priority
+            <Image
+              src="https://i.postimg.cc/9f1qfdBc/1760844854162.png"
+              alt="Crypto Finder Club Hero Image"
+              layout="fill"
+              objectFit="contain"
+              className="opacity-40"
+              priority
             />
             <div className="absolute inset-0 flex justify-center items-center">
-                <Globe />
+              <Globe />
             </div>
           </div>
         </div>
