@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Globe } from "./globe";
 import Image from "next/image";
 
 export function HeroSection() {
@@ -42,12 +41,8 @@ export function HeroSection() {
               alt="Crypto Finder Club Hero Image"
               layout="fill"
               objectFit="contain"
-              className="opacity-40"
               priority
             />
-            <div className="absolute inset-0 flex justify-center items-center">
-              <Globe />
-            </div>
           </div>
         </div>
       </div>
