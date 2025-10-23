@@ -26,7 +26,7 @@ const MobileMockup = ({ src, alt, className }: { src: string, alt: string, class
             <div className="h-[28px] w-[2px] bg-gray-800 absolute -start-[8px] top-[70px] rounded-s-lg"></div>
             <div className="h-[28px] w-[2px] bg-gray-800 absolute -end-[8px] top-[80px] rounded-e-lg"></div>
             <div className="rounded-[1.2rem] overflow-hidden w-full h-full bg-white dark:bg-gray-800">
-                <Image src={src} alt={alt} layout="fill" objectFit="cover" className="w-full h-full"/>
+                <Image src={src} alt={alt} layout="fill" objectFit="contain" className="w-full h-full"/>
             </div>
         </div>
     );
