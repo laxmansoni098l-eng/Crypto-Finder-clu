@@ -1,3 +1,4 @@
+
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import {
@@ -12,69 +13,99 @@ import { ExternalLink, Megaphone } from "lucide-react";
 
 const announcementLinks = [
   {
-    title: "AMA Announcement: Project Alpha",
-    date: "October 25, 2023",
-    url: "https://t.me/Crypto_FinderNews/4981",
+    title: "AMA Announcement: Project BabyBNBTiger",
+    date: "April 25, 2023",
+    url: "https://t.me/Crypto_FinderNews/1218",
   },
   {
-    title: "AMA Announcement: Project Beta",
-    date: "December 14, 2023",
-    url: "https://t.me/Crypto_FinderNews/5393",
+    title: "AMA Announcement: Project Gate.io Exchange",
+    date: "January 30, 2023",
+    url: "https://t.me/Crypto_FinderNews/800",
   },
   {
-    title: "AMA Announcement: Project Gamma",
-    date: "February 27, 2024",
-    url: "https://t.me/Crypto_FinderNews/5732",
+    title: "AMA Announcement: Project Tapbit Exchange",
+    date: "May 19, 2024",
+    url: "https://t.me/Crypto_FinderNews/3538",
   },
   {
-    title: "AMA Announcement: Project Delta",
-    date: "March 4, 2024",
-    url: "https://t.me/Crypto_FinderNews/5754",
+    title: "AMA Announcement: Project Wondra",
+    date: "January 5, 2024",
+    url: "https://t.me/Crypto_FinderNews/3679",
   },
   {
-    title: "AMA Announcement: Project Epsilon",
-    date: "April 11, 2024",
-    url: "https://t.me/Crypto_FinderNews/5876",
+    title: "AMA Announcement: Project Vara Network",
+    date: "January 11, 2024",
+    url: "https://t.me/Crypto_FinderNews/3699",
   },
   {
-    title: "AMA Announcement: Project Zeta",
-    date: "July 15, 2023",
+    title: "AMA Announcement: Project AI Dragon Global",
+    date: "January 16, 2024",
+    url: "https://t.me/Crypto_FinderNews/3771",
+  },
+  {
+    title: "AMA Announcement: Project FINE Citizens",
+    date: "January 29, 2024",
+    url: "https://t.me/Crypto_FinderNews/3897",
+  },
+  {
+    title: "AMA Announcement: Project SBT",
+    date: "August 13, 2024",
+    url: "https://t.me/Crypto_FinderNews/4123",
+  },
+  {
+    title: "AMA Announcement: Project Platon Network",
+    date: "August 21, 2024",
+    url: "https://t.me/Crypto_FinderNews/4164",
+  },
+  {
+    title: "AMA Announcement: Project MEVBRIDGE",
+    date: "September 11, 2024",
+    url: "https://t.me/Crypto_FinderNews/4244",
+  },
+  {
+    title: "AMA Announcement: Project ANTA Global",
+    date: "October 8, 2024",
+    url: "https://t.me/Crypto_FinderNews/4412",
+  },
+  {
+    title: "AMA Announcement: Project CryptoCasino",
+    date: "October 18, 2024",
+    url: "https://t.me/Crypto_FinderNews/4454",
+  },
+  {
+    title: "AMA Announcement: Project Gather Top",
+    date: "October 25, 2024",
+    url: "https://t.me/Crypto_FinderNews/4492",
+  },
+  {
+    title: "AMA Announcement: Project Infinity Exchange",
+    date: "October 25, 2024",
+    url: "https://t.me/Crypto_FinderNews/4510",
+  },
+  {
+    title: "AMA Announcement: Project VETRA",
+    date: "November 24, 2024",
     url: "https://t.me/Crypto_FinderNews/4656",
   },
   {
-    title: "AMA Announcement: Project Eta",
-    date: "September 5, 2023",
+    title: "AMA Announcement: Project MIRA",
+    date: "January 3, 2025",
     url: "https://t.me/Crypto_FinderNews/4921",
   },
   {
-    title: "AMA Announcement: Project Theta",
-    date: "September 28, 2023",
+    title: "AMA Announcement: Project CHAI",
+    date: "January 9, 2025",
     url: "https://t.me/Crypto_FinderNews/4967",
   },
   {
-    title: "AMA Announcement: Project Iota",
-    date: "November 20, 2023",
+    title: "AMA Announcement: Project SmartMall",
+    date: "February 27, 2025",
     url: "https://t.me/Crypto_FinderNews/5173",
   },
   {
-    title: "AMA Announcement: Project Kappa",
-    date: "March 3, 2024",
+    title: "AMA Announcement: Project JF JuFinance",
+    date: "August 2, 2025",
     url: "https://t.me/Crypto_FinderNews/5742",
-  },
-  {
-    title: "AMA Announcement: Project Lambda",
-    date: "March 5, 2024",
-    url: "https://t.me/Crypto_FinderNews/5746",
-  },
-  {
-    title: "AMA Announcement: Project Mu",
-    date: "April 20, 2024",
-    url: "https://t.me/Crypto_FinderNews/5895",
-  },
-  {
-    title: "AMA Announcement: Project Nu",
-    date: "April 22, 2024",
-    url: "https://t.me/Crypto_FinderNews/5901",
   },
 ];
 
