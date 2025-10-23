@@ -23,8 +23,8 @@ export function PartnersSection() {
               <Image
                 src={partner.logoUrl}
                 alt={partner.name}
-                width={250}
-                height={125}
+                width={600}
+                height={300}
                 className="object-contain"
               />
             </div>
