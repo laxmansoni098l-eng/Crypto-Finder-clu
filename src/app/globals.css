@@ -10,19 +10,19 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 2%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 72% 51%;
+    --primary: 0 84.2% 60.2%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 72% 51%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 60%;
-    --accent: 0 72% 51%;
+    --accent: 0 84.2% 60.2%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 72% 51%;
+    --border: 0 84.2% 60.2%;
     --input: 0 0% 10%;
-    --ring: 0 72% 51%;
+    --ring: 0 84.2% 60.2%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -45,19 +45,19 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 2%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 72% 51%;
+    --primary: 0 84.2% 60.2%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 72% 51%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 60%;
-    --accent: 0 72% 51%;
+    --accent: 0 84.2% 60.2%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 72% 51%;
+    --border: 0 84.2% 60.2%;
     --input: 0 0% 10%;
-    --ring: 0 72% 51%;
+    --ring: 0 84.2% 60.2%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -109,12 +109,11 @@
 
   .dark body::after {
     background-image: 
-        radial-gradient(circle at top right, hsl(var(--accent) / 0.05), transparent 30%),
-        radial-gradient(circle at bottom left, hsl(var(--primary) / 0.05), transparent 30%),
-        repeating-conic-gradient(from 45deg, hsl(var(--primary) / 0.02) 0% 25%, transparent 25% 50%);
-    background-size: 300% 300%, 300% 300%, 80px 80px;
-    animation: gradientAnimation 20s ease infinite, gridAnimation 30s linear infinite;
-    animation-direction: reverse, normal;
+      repeating-linear-gradient(45deg, hsl(var(--primary) / 0.02), hsl(var(--primary) / 0.02) 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(-45deg, hsl(var(--primary) / 0.02), hsl(var(--primary) / 0.02) 1px, transparent 1px, transparent 40px);
+    background-size: 80px 80px, 80px 80px;
+    animation: gradientAnimation 20s ease infinite, gridAnimation 15s linear infinite;
+    animation-direction: normal, reverse;
   }
 }
 
@@ -125,8 +124,8 @@
 }
 
 @keyframes gridAnimation {
-  from { background-position: 0 0, 0 0, 0 0; }
-  to { background-position: 0 0, 0 0, 80px -80px; }
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 80px 0, -80px 0; }
 }
 
 
