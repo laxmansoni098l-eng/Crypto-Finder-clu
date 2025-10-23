@@ -18,7 +18,7 @@ const CryptoTicker = () => {
     const fetchCryptoData = async () => {
       try {
         const response = await fetch(
-          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana,binancecoin,dogecoin,ripple,cardano,shiba-inu,avalanche-2,polkadot&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h&x_cg_demo_api_key=CG-8udaN3LrarKVBUDPSVbZbXZ2"
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,binancecoin,tether,usd-coin,solana,ripple,dogecoin&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h&x_cg_demo_api_key=CG-8udaN3LrarKVBUDPSVbZbXZ2"
         );
         if (!response.ok) {
             throw new Error('Failed to fetch crypto data');
