@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Globe } from "./globe";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
@@ -35,8 +36,18 @@ export function HeroSection() {
               Get a Quote
             </Button>
           </div>
-          <div className="hidden md:flex justify-center items-center">
-            <Globe />
+          <div className="relative hidden md:flex justify-center items-center h-[500px]">
+            <Image 
+                src="https://i.postimg.cc/9f1qfdBc/1760844854162.png"
+                alt="Crypto Finder Club Hero Image"
+                layout="fill"
+                objectFit="contain"
+                className="opacity-20"
+                priority
+            />
+            <div className="absolute inset-0 flex justify-center items-center">
+                <Globe />
+            </div>
           </div>
         </div>
       </div>
