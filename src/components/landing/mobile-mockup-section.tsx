@@ -35,13 +35,13 @@ const MobileMockup = ({
   return (
     <div
       className={cn(
-        "relative mx-auto bg-zinc-900 border-zinc-700 border-[10px] rounded-[2.5rem] h-[320px] w-[160px] shadow-2xl shadow-primary/20 cursor-pointer",
+        "relative mx-auto bg-red-900 border-red-700 border-[10px] rounded-[2.5rem] h-[320px] w-[160px] shadow-2xl shadow-primary/20 cursor-pointer",
         className
       )}
       style={style}
       onClick={onClick}
     >
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 bg-zinc-900 rounded-full z-20"></div>
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 bg-red-900 rounded-full z-20"></div>
       <div className="rounded-[2rem] overflow-hidden w-full h-full bg-background">
         <Image
           src={src}
