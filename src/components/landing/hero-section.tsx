@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Globe } from "./globe";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-32 bg-background">
+    <section className="relative overflow-hidden py-20 md:py-32 bg-transparent">
       <div
         className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -z-10"
         aria-hidden="true"
@@ -36,13 +37,7 @@ export function HeroSection() {
             </Button>
           </div>
           <div className="relative hidden md:flex justify-center items-center h-[500px]">
-            <Image
-              src="https://i.postimg.cc/GtBjn7G7/1760844854162.png"
-              alt="Crypto Finder Club Hero Image"
-              layout="fill"
-              objectFit="contain"
-              priority
-            />
+            <Globe />
           </div>
         </div>
       </div>
