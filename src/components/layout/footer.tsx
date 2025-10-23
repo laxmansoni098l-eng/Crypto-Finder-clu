@@ -21,7 +21,7 @@ import { Logo } from "@/components/logo";
 
 const socialLinks = [
   {
-    href: "#",
+    href: "https://linktr.ee/CryptoFinderClub",
     icon: <LinkIcon className="h-5 w-5" />,
     name: "Linktree",
   },
