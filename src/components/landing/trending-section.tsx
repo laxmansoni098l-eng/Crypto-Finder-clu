@@ -1,41 +1,71 @@
 "use client";
 
 import { Flame, TrendingUp, TrendingDown } from "lucide-react";
+import { useEffect, useState } from "react";
 
-const cryptoData = [
-  { name: "BTC", price: "68,420.10", change: "+2.5%", trend: "up" },
-  { name: "ETH", price: "3,567.80", change: "+4.1%", trend: "up" },
-  { name: "SOL", price: "168.99", change: "-1.2%", trend: "down" },
-  { name: "BNB", price: "601.50", change: "+1.8%", trend: "up" },
-  { name: "DOGE", price: "0.158", change: "+8.7%", trend: "up" },
-  { name: "XRP", price: "0.523", change: "-0.5%", trend: "down" },
-  { name: "ADA", price: "0.456", change: "+3.2%", trend: "up" },
-  { name: "SHIB", price: "0.000025", change: "+12.3%", trend: "up" },
-  { name: "AVAX", price: "37.80", change: "-2.1%", trend: "down" },
-  { name: "DOT", price: "7.15", change: "+1.5%", trend: "up" },
-];
+interface CryptoData {
+  id: string;
+  name: string;
+  symbol: string;
+  current_price: number;
+  price_change_percentage_24h: number;
+}
 
 const CryptoTicker = () => {
-  const extendedCryptoData = [...cryptoData, ...cryptoData]; // Duplicate for seamless loop
+  const [cryptoData, setCryptoData] = useState<CryptoData[]>([]);
+
+  useEffect(() => {
+    const fetchCryptoData = async () => {
+      try {
+        const response = await fetch(
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,solana,binancecoin,dogecoin,ripple,cardano,shiba-inu,avalanche-2,polkadot&order=market_cap_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h&x_cg_demo_api_key=CG-8udaN3LrarKVBUDPSVbZbXZ2"
+        );
+        if (!response.ok) {
+            throw new Error('Failed to fetch crypto data');
+        }
+        const data: CryptoData[] = await response.json();
+        setCryptoData(data);
+      } catch (error) {
+        console.error("Error fetching crypto data:", error);
+      }
+    };
+
+    fetchCryptoData();
+    const interval = setInterval(fetchCryptoData, 60000); // Refresh every minute
+
+    return () => clearInterval(interval);
+  }, []);
+
+  if (cryptoData.length === 0) {
+    return (
+        <div className="flex items-center justify-center w-full">
+            <span className="text-muted-foreground">Loading prices...</span>
+        </div>
+    );
+  }
+
+  const extendedCryptoData = [...cryptoData, ...cryptoData];
 
   return (
     <div className="relative w-full overflow-hidden">
       <div className="flex animate-scroll">
         {extendedCryptoData.map((crypto, index) => (
           <div key={index} className="flex flex-shrink-0 items-center gap-4 px-6">
-            <span className="font-bold text-foreground">{crypto.name}</span>
-            <span className="text-muted-foreground">${crypto.price}</span>
+            <span className="font-bold text-foreground">{crypto.symbol.toUpperCase()}</span>
+            <span className="text-muted-foreground">
+              ${crypto.current_price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 6 })}
+            </span>
             <div
               className={`flex items-center gap-1 text-sm ${
-                crypto.trend === "up" ? "text-green-400" : "text-red-400"
+                crypto.price_change_percentage_24h >= 0 ? "text-green-400" : "text-red-400"
               }`}
             >
-              {crypto.trend === "up" ? (
+              {crypto.price_change_percentage_24h >= 0 ? (
                 <TrendingUp className="h-4 w-4" />
               ) : (
                 <TrendingDown className="h-4 w-4" />
               )}
-              <span>{crypto.change}</span>
+              <span>{crypto.price_change_percentage_24h.toFixed(2)}%</span>
             </div>
           </div>
         ))}
